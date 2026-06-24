@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[22016,["/matching-app/_next/static/chunks/1vzbxijssrfd-.js","/matching-app/_next/static/chunks/14mrh2-p_w84d.js"],""]
+3:I[97367,["/matching-app/_next/static/chunks/1vzbxijssrfd-.js","/matching-app/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+:HL["https://picsum.photos/seed/aoi1/600/800","image"]
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","h1",null,{"className":"mb-4 text-lg font-bold","children":"マッチ"}],["$","ul",null,{"className":"space-y-2","children":[["$","li","m1",{"children":["$","$L2",null,{"href":"/matches/m1","className":"flex items-center gap-3 rounded-2xl bg-white p-3 shadow-sm ring-1 ring-black/5 transition hover:shadow-md dark:bg-neutral-900 dark:ring-white/10","children":[["$","div",null,{"className":"h-14 w-14 shrink-0 overflow-hidden rounded-full","children":["$","img",null,{"src":"https://picsum.photos/seed/aoi1/600/800","alt":"あおい","style":{"width":"100%","height":"100%"},"className":"object-cover h-full w-full"}]}],["$","div",null,{"className":"min-w-0 flex-1","children":[["$","p",null,{"className":"font-bold","children":"あおい"}],["$","p",null,{"className":"truncate text-sm text-gray-500 dark:text-gray-400","children":"はじめまして！プロフィール拝見しました、カフェ好きなんですね☕️"}]]}],["$","span",null,{"className":"text-gray-300 dark:text-gray-600","children":"›"}]]}]}]]}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"CfWwZDkmjAW_iAGiSGBtF"}
+5:null
