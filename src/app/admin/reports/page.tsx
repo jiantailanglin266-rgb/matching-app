@@ -7,7 +7,7 @@
 import { requireUser } from "@/lib/supabase/server";
 import { updateReportStatus } from "@/lib/actions/admin";
 
-export const dynamic = "force-dynamic";
+// 通常運用では requireUser() が cookies() を使うため自動的に動的レンダリングになる。
 
 type ReportRow = {
   id: string;

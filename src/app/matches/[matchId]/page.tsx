@@ -19,7 +19,13 @@ import {
 } from "@/lib/demo";
 import type { Match, Message, Profile } from "@/lib/types";
 
-export const dynamic = "force-dynamic";
+// 通常運用では requireUser() が cookies() を使うため自動的に動的レンダリングになる。
+
+// 静的書き出しデモ（GitHub Pages）用: デモのマッチだけ事前生成する。
+export async function generateStaticParams() {
+  if (process.env.STATIC_EXPORT !== "1") return [];
+  return [{ matchId: "m1" }];
+}
 
 // チャットの共通レイアウト（相手ヘッダー＋本体）
 function ChatLayout({

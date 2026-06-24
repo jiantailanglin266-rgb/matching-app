@@ -15,7 +15,7 @@ import {
 } from "@/lib/demo";
 import type { Match, Profile } from "@/lib/types";
 
-export const dynamic = "force-dynamic";
+// 通常運用では requireUser() が cookies() を使うため自動的に動的レンダリングになる。
 
 export default async function MatchesPage() {
   // ▼ デモモード（最後のメッセージをプレビューに使う）

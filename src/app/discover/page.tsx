@@ -13,7 +13,8 @@ import { DiscoverClient, type ScoredProfile } from "@/components/DiscoverClient"
 import { DEMO_MODE, DEMO_ME, DEMO_PROFILES } from "@/lib/demo";
 import type { Profile } from "@/lib/types";
 
-export const dynamic = "force-dynamic";
+// 通常運用では requireUser() が cookies() を使うため自動的に動的レンダリングになる。
+// （静的書き出しデモ STATIC_EXPORT=1 のときだけ静的化される）
 
 // 候補にスコアを付けて高い順に並べる
 function toScored(me: Profile, candidates: Profile[]): ScoredProfile[] {

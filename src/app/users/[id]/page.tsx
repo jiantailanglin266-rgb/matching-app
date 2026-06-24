@@ -12,7 +12,14 @@ import { purposeLabel, genderLabel } from "@/lib/labels";
 import { DEMO_MODE, DEMO_ME, DEMO_PROFILES } from "@/lib/demo";
 import type { Profile } from "@/lib/types";
 
-export const dynamic = "force-dynamic";
+// 通常運用では requireUser() が cookies() を使うため自動的に動的レンダリングになる。
+
+// 静的書き出しデモ（GitHub Pages）用: デモユーザーのページだけ事前生成する。
+// 通常ビルドでは空配列を返すので影響なし。
+export async function generateStaticParams() {
+  if (process.env.STATIC_EXPORT !== "1") return [];
+  return [{ id: "me" }, { id: "u1" }, { id: "u2" }, { id: "u3" }];
+}
 
 export default async function UserDetailPage({
   params,
