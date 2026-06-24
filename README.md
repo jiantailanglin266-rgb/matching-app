@@ -29,6 +29,31 @@ npm run dev   # http://localhost:3000
 
 ---
 
+## 0.5 公開デプロイ（Vercel）
+
+このアプリは **SSR（Server Components / Server Actions / proxy）** を使うため、
+GitHub Pages（静的専用）では動きません。**Vercel** など Node 実行環境にデプロイします。
+`NEXT_PUBLIC_DEMO_MODE=1` にすれば、Supabase の実鍵なしでモックデータのまま全画面が動きます。
+
+**手順（Webで数分）:**
+1. <https://vercel.com/new> を開き、GitHubで `matching-app` リポジトリを Import
+2. Framework は Next.js が自動検出される（設定変更不要）
+3. **Environment Variables** に以下を追加:
+   | Key | Value |
+   |---|---|
+   | `NEXT_PUBLIC_DEMO_MODE` | `1` |
+   | `NEXT_PUBLIC_SUPABASE_URL` | `https://example.supabase.co`（ダミーでOK） |
+   | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `dummy` |
+4. **Deploy** を押すと `https://matching-app-xxxx.vercel.app` が発行される
+
+> 本番運用に切り替えるときは、`NEXT_PUBLIC_DEMO_MODE` を `0`（または削除）にし、
+> `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` を実値に変更してください。
+
+ワンクリック取り込みリンク（env入力欄が事前に用意されます）:
+`https://vercel.com/new/clone?repository-url=https://github.com/jiantailanglin266-rgb/matching-app&env=NEXT_PUBLIC_DEMO_MODE,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+---
+
 ## 1. 全体設計
 
 ```
